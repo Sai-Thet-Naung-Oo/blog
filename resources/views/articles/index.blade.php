@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-primary" href="{{ url("/articles/detail/$article->id") }}">
-                        View Detail &raquo;
+                        Detail &raquo;
                     </a>
                 </div>
             </div>
