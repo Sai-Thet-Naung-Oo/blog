@@ -1,10 +1,11 @@
 @extends("layouts.app")
 @section("content")
 <div class="container">
-    <div class="row g-1 card-deck">
+{{ $articles->links() }}
+    <div class="row g-1">
         @foreach($articles as $article)
 
-        <div class="col-lg-4 px-1 mb-2">
+        <div class="col-12 mb-2">
 
             <div class="card">
 
