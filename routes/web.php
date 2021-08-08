@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome to');
+    return redirect('/articles');
 });
 
 Route::get('/articles','ArticleController@index');
@@ -32,3 +32,11 @@ Route::get('/articles/more', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/articles/add', 'ArticleController@add');
+Route::post('/articles/add', 'ArticleController@create');
+Route::get('/articles/delete/{id}', 'ArticleController@delete');
+
+//Comments
+Route::post('/comments/add', 'CommentController@create');
+Route::get('/comments/delete/{id}', 'CommentController@delete');
